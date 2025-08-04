@@ -1,0 +1,33 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --odysee-red: #CA004B;
+}
+
+/* display */
+
+
+/* background */
+.pls-odysee .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-odysee .plsSettingsMenuZZform details[open],
+.pls-odysee .plsSettingsMenuZZform [type=button],
+.pls-odysee .plsSettingsMenuZZform button,
+.pls-odysee .plsSideMenuYYdiv button:hover, 
+.pls-odysee .plsSideMenuYYdiv button:focus, 
+.pls-odysee .plsSideMenuYYdiv button:active,
+.pls-odysee .plsSideMenuYYdiv button.focused,
+.pls-odysee .plsSideMenuSearchYYinput:hover, 
+.pls-odysee .plsSideMenuSearchYYinput:focus, 
+.pls-odysee .plsSideMenuSearchYYinput:active,
+.pls-odysee .plsSideMenuSearchYYinput.focused, 
+.pls-odysee .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-odysee .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-odysee .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-odysee .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--odysee-red);
+}
+
+/* color */
+.pls-odysee .pls-chat-a {
+	color: var(--odysee-red);
+}

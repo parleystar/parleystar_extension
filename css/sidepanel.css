@@ -1,0 +1,43 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --sidepanel-yellow: goldenrod;
+}
+
+.pls-sidepanel .plsSettingsMenuZZform::-webkit-scrollbar-thumb, 
+.pls-sidepanel .plsSettingsMenuZZform [type=button],
+.pls-sidepanel .plsSettingsMenuZZform button,
+.pls-sidepanel .plsSideMenuYYdiv button:hover,
+.pls-sidepanel .plsSideMenuYYdiv button:focus, 
+.pls-sidepanel .plsSideMenuYYdiv button:active,
+.pls-sidepanel .plsSideMenuYYdiv button.focused,
+.pls-sidepanel .plsSideMenuSearchYYinput:hover, 
+.pls-sidepanel .plsSideMenuSearchYYinput:focus, 
+.pls-sidepanel .plsSideMenuSearchYYinput:active,
+.pls-sidepanel .plsSideMenuSearchYYinput.focused, 
+.pls-sidepanel .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-sidepanel .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-sidepanel .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-sidepanel .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--sidepanel-yellow);
+}
+
+.pls-sidepanel .plsSidePanelPPdiv, .pls-sidepanel .plsTopZZdiv { background: black; height: 95vh; }
+
+.pls-sidepanel .plsSettingsMenuZZform details[open] { background-color: silver; }
+
+.pls-sidepanel .plsSettingsMenuZZform fieldset label { width: 94%; }
+
+.pls-sidepanel.pls-desktop .chat-container .chat-content[data-v-088ea48c] { opacity: .75; }
+
+.pls-sidepanel .plsSettingsMenuZZform { color: #000; }
+
+.pls-sidepanel .plsSettingsMenuZZform input[type="number"] { color: #bbb; }
+
+.pls-sidepanel .pls-saved-chats-select { background-color: #fff; appearance: none; }
+
+.pls-sidepanel .plsSideMenuYYdiv.pls-focused { bottom: 0px; top: 1px; }
+
+.pls-sidepanel #channel-chatroom span.text-sm.font-bold { cursor: pointer; }
+
+.pls-sidepanel .plsSideMenuSearchYYinput { display: inline-block; }

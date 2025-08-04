@@ -1,0 +1,33 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --trovo-green: #21B36C;
+}
+
+/* display */
+
+
+/* background */
+.pls-trovo .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-trovo .plsSettingsMenuZZform details[open],
+.pls-trovo .plsSettingsMenuZZform [type=button],
+.pls-trovo .plsSettingsMenuZZform button,
+.pls-trovo .plsSideMenuYYdiv button:hover, 
+.pls-trovo .plsSideMenuYYdiv button:focus, 
+.pls-trovo .plsSideMenuYYdiv button:active,
+.pls-trovo .plsSideMenuYYdiv button.focused,
+.pls-trovo .plsSideMenuSearchYYinput:hover, 
+.pls-trovo .plsSideMenuSearchYYinput:focus, 
+.pls-trovo .plsSideMenuSearchYYinput:active,
+.pls-trovo .plsSideMenuSearchYYinput.focused, 
+.pls-trovo .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-trovo .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-trovo .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-trovo .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--trovo-green);
+}
+
+/* color */
+.pls-trovo .pls-chat-a {
+	color: var(--trovo-green);
+}

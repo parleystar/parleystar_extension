@@ -1,0 +1,33 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --sooplive-blue: #6fb9ff;
+}
+
+/* display */
+
+
+/* background */
+.pls-sooplive .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-sooplive .plsSettingsMenuZZform details[open],
+.pls-sooplive .plsSettingsMenuZZform [type=button],
+.pls-sooplive .plsSettingsMenuZZform button,
+.pls-sooplive .plsSideMenuYYdiv button:hover, 
+.pls-sooplive .plsSideMenuYYdiv button:focus, 
+.pls-sooplive .plsSideMenuYYdiv button:active,
+.pls-sooplive .plsSideMenuYYdiv button.focused,
+.pls-sooplive .plsSideMenuSearchYYinput:hover, 
+.pls-sooplive .plsSideMenuSearchYYinput:focus, 
+.pls-sooplive .plsSideMenuSearchYYinput:active,
+.pls-sooplive .plsSideMenuSearchYYinput.focused, 
+.pls-sooplive .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-sooplive .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-sooplive .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-sooplive .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--sooplive-blue);
+}
+
+/* color */
+.pls-sooplive .pls-chat-a {
+	color: var(--sooplive-blue);
+}

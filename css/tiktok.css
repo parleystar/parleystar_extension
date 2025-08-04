@@ -1,0 +1,33 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --tiktok-red: #FE2C55;
+}
+
+/* display */
+
+
+/* background */
+.pls-tiktok .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-tiktok .plsSettingsMenuZZform details[open],
+.pls-tiktok .plsSettingsMenuZZform [type=button],
+.pls-tiktok .plsSettingsMenuZZform button,
+.pls-tiktok .plsSideMenuYYdiv button:hover, 
+.pls-tiktok .plsSideMenuYYdiv button:focus, 
+.pls-tiktok .plsSideMenuYYdiv button:active,
+.pls-tiktok .plsSideMenuYYdiv button.focused,
+.pls-tiktok .plsSideMenuSearchYYinput:hover, 
+.pls-tiktok .plsSideMenuSearchYYinput:focus, 
+.pls-tiktok .plsSideMenuSearchYYinput:active,
+.pls-tiktok .plsSideMenuSearchYYinput.focused, 
+.pls-tiktok .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-tiktok .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-tiktok .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-tiktok .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--tiktok-red);
+}
+
+/* color */
+.pls-tiktok .pls-chat-a {
+	color: var(--tiktok-red);
+}

@@ -1,0 +1,33 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --nimo-purple: #6c47ff;
+}
+
+/* display */
+
+
+/* background */
+.pls-nimo .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-nimo .plsSettingsMenuZZform details[open],
+.pls-nimo .plsSettingsMenuZZform [type=button],
+.pls-nimo .plsSettingsMenuZZform button,
+.pls-nimo .plsSideMenuYYdiv button:hover, 
+.pls-nimo .plsSideMenuYYdiv button:focus, 
+.pls-nimo .plsSideMenuYYdiv button:active,
+.pls-nimo .plsSideMenuYYdiv button.focused,
+.pls-nimo .plsSideMenuSearchYYinput:hover, 
+.pls-nimo .plsSideMenuSearchYYinput:focus, 
+.pls-nimo .plsSideMenuSearchYYinput:active,
+.pls-nimo .plsSideMenuSearchYYinput.focused, 
+.pls-nimo .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-nimo .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-nimo .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-nimo .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--nimo-purple);
+}
+
+/* color */
+.pls-nimo .pls-chat-a {
+	color: var(--nimo-purple);
+}

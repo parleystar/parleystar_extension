@@ -1,0 +1,554 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1)  */
+
+:root {
+  --text-color: #333;
+  --background-color: #ccc;
+  color-scheme: light;
+}
+
+.dark {
+  --text-color: #ccc;
+  --background-color: #333;
+  color-scheme: dark;
+}
+
+::backdrop {
+  backdrop-filter: blur(1.5px);
+}
+
+/* utility classes */
+body.pls-loaded .pls-hide { display: none; }
+body.pls-loaded .pls-bl { display: block; }
+body.pls-loaded .pls-fl { display: flex; }
+body.pls-loaded .pls-chat-on { padding-left: .5rem !important; padding-right: .5rem !important; }
+body.pls-loaded .pls-chat-mute { opacity: .3 !important; }
+body.pls-loaded .pls-chat-hide { opacity: 0 !important; }
+body.pls-loaded .pls-chat-highlight { font-size: 2.5rem !important; line-height: 1.25 !important; }
+body.pls-loaded .pls-active {  }
+body.pls-loaded .pls-active-chat {  }
+body.pls-loaded .pls-focused {  }
+body.pls-loaded .pls-multiple { background: silver; }
+body.pls-loaded .pls-forefront {  }
+body.pls-loaded .pls-chat {  }
+body.pls-loaded .pls-sr-only { height: 1px; width: 1px; position: absolute; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+.pls-chat-line {  }
+
+/* body classes */
+.pls-loaded {
+
+}
+.pls-mobile {
+
+}
+.pls-desktop {
+
+}
+.pls-popout {
+
+}
+
+#plsToast { background: var(--background-color); color: var(--text-color); font-size: medium; min-width: 250px; visibility: hidden; z-index: 1111111; text-align: center; border-radius: 2px; padding: 16px; position: fixed; right: 0px; bottom: 5px; }
+#plsToast.pls-bl { visibility: visible; -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+#plsLoading { background: var(--background-color); color: var(--text-color); display: none; }
+#plsLoading.pls-bl { position: fixed; top: 0px; z-index: 10000000; border: 1px dotted silver; }
+ 
+.plsTopZZdiv { }
+.plsTopTitleZZh4 { background: var(--background-color); color: #ff0000; display: none; z-index: 1000000; position: absolute; left: 0px; top: 380px; }
+.plsTopChatAZZspan {   }
+.plsTopChatBZZspan {   }
+
+.plsTopZZdiv button { transition: 0.2s transform ease-in-out; will-change: transform; margin-top: 1rem; margin-bottom: 1rem; border: 1px solid --text-color; }
+.plsTopZZdiv button:hover,
+.plsTopZZdiv button:focus,
+.plsTopZZdiv button:active,
+.plsTopZZdiv button:focus-within,
+.plsTopZZdiv button.pls-focused { transform: scale(1.1); will-change: transform; }
+
+.plsSettingsMenuZZdialog { max-width: 85%; border: none !important; border-radius: calc(5px * var(--ratio)); box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25); margin: 0 auto; margin-top: 2rem; padding: 1rem; opacity: .75; }
+body.pls-popout .plsSettingsMenuZZdialog, body.pls-mobile .plsSettingsMenuZZdialog { width: 100%; max-width: 100%; }
+
+.plsSettingsMenuTitleZZh5 {   }
+
+.plsChatsMenuImportTitleZZh4 { margin-top: 2rem; }
+
+.plsSettingsMenuZZdialog [type=button] { padding: 1rem; cursor: pointer; }
+.plsSettingsMenuZZdialog > small { display: block; }
+
+.plsSettingsMenuZZform { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); grid-gap: 1rem; }
+.plsSettingsMenuZZform details { height: 2.5rem; overflow-y: scroll; }
+.plsSettingsMenuZZform details[open] { height: 10rem; }
+.plsSettingsMenuZZform hr { background: var(--background-color); color: var(--text-color); height: 20px; }
+.plsSettingsMenuZZform legend { font-weight: 800; cursor: pointer; }
+.plsSettingsMenuZZform summary { cursor: pointer; }
+.plsSettingsMenuZZform [type=button] {  }
+
+.plsSettingsMenuZZform small i { font-size: xx-small; }
+.plsSettingsMenuZZform fieldset { font-size: .7rem; }
+.plsSettingsMenuZZform fieldset label { display: inline-block; width: 95%; cursor: pointer; padding-bottom: 1.5rem; }
+.plsSettingsMenuZZform fieldset label:hover { font-size: 125%; }
+.plsSettingsMenuZZform fieldset label.pls-no-hover:hover { font-size: initial; }
+
+.plsSettingsMenuZZform input[type="text"] { display: block; height: 2rem; max-width: fit-content; opacity: 1; }
+.plsSettingsMenuZZform input[type="checkbox"] { display: block; height: 50px; width: 50px; opacity: 1; }
+.plsSettingsMenuZZform input[type="color"] { display: block; height: 50px; width: 50px; opacity: 1; }
+.plsSettingsMenuZZform input[type="number"] { display: block; height: 50px; width: 50px; opacity: 1; }
+.plsSettingsMenuZZform input[type="number"]:invalid { background: orangered; color: yellow; border: 3px solid yellow; }
+.plsSettingsMenuZZform h5, .plsSettingsMenuZZform section { border: 1px solid #E2E2E2; border-radius: .5rem; }
+[data-tooltip] { background: var(--background-color); color: var(--text-color); line-height: 1; width: 1rem; cursor: pointer; position: relative; padding: .25rem; float: left; border-radius: 5px; }
+
+body.pls-popout .plsSettingsMenuZZform input[type="text"], body.pls-mobile .plsSettingsMenuZZform input[type="text"] { height: 3rem; }
+
+
+.plsSettingsMenuZZform {   }
+
+.plsChatsMenuZZdetails {   }
+.plsChatsMenuZZsummary {   }
+.plsChatsMenuZZp {   }
+.plsChatsMenuZZfieldset {   }
+.plsChatsMenuZZlegend {   }
+.plsChatsMenuWrapperZZdiv {   }
+.plsChatsMenuLiveWrapperZZdiv {   }
+.plsChatsMenuLiveTitleZZh5 {   }
+.plsChatsMenuLiveZZselect { width: 90%; height: 3rem; }
+
+.plsChatsMenuLoadWrapperZZdiv {   }
+.plsChatsMenuLoadZZbutton {   }
+.plsChatsMenuImportZZbutton {   }
+.plsChatsMenuSavedWrapperZZdiv {   }
+.plsChatsMenuSavedTitleZZsmall { display: block; clear: both; margin-top: 2rem; }
+
+.plsChatsMenuSortStreamsByServiceIDZZbutton {   }
+.plsChatsMenuSortStreamsByChannelIDZZbutton {   }
+.plsChatsMenuSortStreamsByVideoIDZZbutton {   }
+.plsChatsMenuSortStreamsByChanZZbutton {   }
+.plsChatsMenuPreviousStreamsZZdiv { padding-top: 1rem; padding-bottom: 1rem; }
+
+.plsFeaturesMenuZZdetails {   }
+.plsFeaturesMenuZZsummary {   }
+.plsFeaturesMenuZZp {   }
+
+.plsHideMenuZZfieldset {   }
+.plsHideMenuZZlegend {   }
+.plsHideMenuWrapperZZdiv {   }
+.plsHideMenuTitleZZsection {   }
+
+.plsb1 {   }
+.plsb2 {   }
+.plsb3 {   }
+.plsb4 {   }
+.plsb5 {   }
+.plsb6 {   }
+.plsb7 {   }
+.plsb8 {   }
+.plsb9 {   }
+.plsb10 {   }
+.plsb11 {   }
+.plsb12 {   }
+.plsb13 {   }
+.plsb14 {   }
+.plsb15 {   }
+.plsb16 {   }
+.plsb17 {   }
+
+.plsMuteMenuZZfieldset {   }
+.plsMuteMenuZZlegend {   }
+.plsMuteMenuWrapperZZdiv {   }
+.plsMuteMenuTitle {   }
+.plsMuteMenuTitleZZsection {   }
+
+.plsb21 {   }
+.plsb22 {   }
+.plsb23 {   }
+.plsb24 {   }
+.plsb25 {   }
+.plsb26 {   }
+.plsb27 {   }
+.plsb28 {   }
+.plsb29 {   }
+
+.plsOptionsMenuZZfieldset {   }
+.plsOptionsMenuZZlegend {   }
+.plsOptionsMenuWrapperZZdiv {   }
+.plsOptionsMenuTitleZZsection {   }
+
+.plsb31 {   }
+.plsb32 {   }
+.plsb33 {   }
+.plsb34 {   }
+.plsb35 {   }
+.plsb36 {   }
+.plsb37 {   }
+.plsb38 {   }
+
+.plsThemeMenuZZdetails {   }
+.plsThemeMenuZZsummary {  }
+.plsThemeMenuZZp {   }
+
+.plsColorsMenuZZfieldset {   }
+.plsColorsMenuZZlegend {   }
+.plsColorsMenuWrapperZZdiv {   }
+.plsColorsMenuTitleZZsection {   }
+
+.plsc1 {   }
+.plsc2 {   }
+.plsc3 {   }
+.plsc4 {   }
+.plsc5 {   }
+.plsc6 {   }
+.plsc7 {   }
+.plsc8 {   }
+.plsc9 {   }
+.plsc10 {   }
+.plsc11 {   }
+.plsc12 {   }
+.plsc13 {   }
+.plsc14 {   }
+.plsc15 {   }
+.plsc16 {   }
+.plsc17 {   }
+.plsc18 {   }
+.plsc19 {   }
+.plsc20 {   }
+.plsc21 {   }
+.plsc22 {   }
+.plsc23 {   }
+.plsc24 {   }
+
+.plsOpacityMenuZZfieldset {   }
+.plsOpacityMenuZZlegend {  }
+.plsOpacityMenuWrapperZZdiv {   }
+.plsOpacityMenuTitleZZsection {  }
+
+.plsn1 {   }
+.plsn2 {   }
+.plsn3 {   }
+.plsn4 {   }
+.plsn5 {   }
+.plsn6 {   }
+.plsn7 {   }
+.plsn8 {   }
+.plsn9 {   }
+.plsn10 {   }
+.plsn11 {   }
+.plsn12 {   }
+.plsn13 {   }
+.plsn14 {   }
+.plsn15 {   }
+.plsn16 {   }
+.plsn17 {   }
+.plsn18 {   }
+.plsn19 {   }
+.plsn20 {   }
+.plsn21 {   }
+.plsn22 {   }
+.plsn23 {   }
+.plsn24 {   }
+
+.plsContentMenuZZfieldset {   }
+.plsContentMenuZZlegend {   }
+.plsContentMenuWrapperZZdiv {   }
+.plsContentMenuTitleZZsection {   }
+
+.plsv1 {   }
+.plsv2 {   }
+.plsv3 {   }
+.plsv4 {   }
+.plsv5 {   }
+.plsv6 {   }
+.plsv7 {   }
+.plsv8 {   }
+
+.plsVideosMenuWrapperZZdiv { display: grid; display: none; }
+.plsVideosMenuChannelClipsZZbutton {  }
+.plsVideosMenuChannelStreamsZZbutton {  }
+.plsVideosMenuFollowedClipsZZbutton {  }
+.plsVideosMenuFollowedStreamsZZbutton {  }
+.plsVideosMenuCategoryClipsZZbutton {  }
+.plsVideosMenuCategoryStreamsZZbutton {  }
+.plsVideosMenuLoadedVideosSortRandomZZbutton {  }
+.plsVideosMenuLoadedVideosSortAlphaStreamerZZbutton {  }
+.plsVideosMenuLoadedVideosSortAlphaTitleZZbutton {  }
+.plsVideosMenuLoadedVideosSortDateZZbutton {  }
+.plsVideosMenuLoadedVideosSortCategoryZZbutton {  }
+.plsVideosMenuZZh4 {  }
+.plsVideosMenuVideoPlayerZZiframe {  }
+.plsVideosMenuContentZZdiv {  }
+.plsSettingsMenuCloseZZbutton { width: fit-content; }
+
+.plsSideMenuYYdiv {  }
+.plsSideMenuYYbutton { right: 0px; position: absolute; top: 5px; width: 30px; height: 30px; }
+.plsSideMenuWrapperYYdiv { height: fit-content; width: 35px; position: absolute; z-index: 1000; background-color: black; right: 0px; top: 2.5rem; }
+.plsSideMenuYYform {  }
+.plsSideMenuWrapperYYdiv button { height: 30px; width: 35px; }
+.pls1 {  }
+.pls2 {  }
+.pls3 {  }
+.pls4 {  }
+.pls5 {  }
+.pls6 {  }
+.pls7 {  }
+.pls8 {  }
+.pls9 {  }
+.pls10 {  }
+.pls11 {  }
+.pls12 {  }
+.pls13 {  }
+
+.plsSideMenuFilterYYbutton {  }
+.plsSideMenuFilterWrapperYYdiv {  }
+
+.plsSideMenuFilterWrapperYYdiv button.pls-on { background-color: silver; }
+.plsSideMenuFilterWrapperYYdiv button.pls-inverse { background-color: brown; }
+
+
+.plsSideMenuSearchWrapperYYdiv {  }
+.plsSideMenuSearchYYsearch {  }
+.plsSideMenuSearchYYsearch:has(> input:focus), 
+.plsSideMenuSearchYYsearch:has(> input:active),
+.plsSideMenuSearchYYsearch:has(> input:focus-within) { background-color: black; position: absolute; top: -47px; height: 50vh; }
+.plsSideMenuSearchYYinput { background: var(--background-color); color: var(--text-color); margin-top: .5rem; margin-bottom: .5rem; height: 45px; border: 1px solid red; padding-left: 4px; }
+.plsSideMenuSearchYYinput:active, 
+.plsSideMenuSearchYYinput:hover, 
+.plsSideMenuSearchYYinput:focus, 
+.plsSideMenuSearchYYinput:focus-within, 
+.plsSideMenuSearchYYinput:focus-visible { position: relative; width: 50vw; left: -144px; }
+
+.plsSideMenuSearchYYsearch button { position: relative; display: block; }
+
+.plsSideMenuChatSearchStartsWithYYbutton {  }
+.plsSideMenuChatSearchUserYYbutton {  }
+.plsSideMenuChatSearchKeywordYYbutton {  }
+.plsSideMenuChatSearchEventsYYbutton {  }
+.plsSideMenuChatSearchFullYYbutton {  }
+.plsSideMenuChatSearchMultiYYbutton {  }
+.plsSideMenuChatSearchCloseYYbutton {  }
+
+.plsChatMenuXXdiv { width: 90%; }
+.plsChatMenuXXdiv aside { background: var(--background-color); color: var(--text-color); display: none; min-height: 200px; width: 100%; max-width: 100%; position: absolute; top: 0; left: 0; border-top: 5px solid #e74c3c; border-radius: 0 10px 10px 10px; }
+.plsChatMenuXXdiv input { display: none; }
+.plsChatMenuXXdiv label { background: #ecf0f1; display: block; color: #111; width: 20px; cursor: pointer; float: left; margin-right: 5px; padding: 0px; }
+.plsChatMenuXXdiv input:checked + label { background: #e74c3c; }
+.plsChatMenuXXdiv search { display: inline-block; }
+.plsChatMenuXXdiv input[id=plsChatMenu1XXbutton]:checked ~ .plsChatMenuWrapperXXdiv .plsChatMenu1XXaside { display: block;  }
+.plsChatMenuXXdiv input[id=plsChatMenu2XXbutton]:checked ~ .plsChatMenuWrapperXXdiv .plsChatMenu1XXaside { display: block;  }
+.plsChatMenuXXdiv input[id=plsChatMenu3XXbutton]:checked ~ .plsChatMenuWrapperXXdiv .plsChatMenu1XXaside { display: block;  }
+.plsChatMenuXXdiv input[id=plsChatMenu4XXbutton]:checked ~ .plsChatMenuWrapperXXdiv .plsChatMenu1XXaside { display: block;  }
+.plsChatMenuXXdiv .plsChatMenuWrapperXXdiv { width: 90%; clear: both; position: relative; z-index: 10000000000; }
+
+.plsSideMenuSearchWrapperYYdiv button { background: --background-color; color: --text-color; width: 1.5rem; }
+
+.plsChatMenu1XXbutton {  }
+.plsChatMenu2XXbutton {  }
+.plsChatMenu3XXbutton {  }
+.plsChatMenu4XXbutton {  }
+.plsChatMenuWrapperXXdiv {  }
+.plsChatMenu1XXaside {  }
+.plsChatMenuDragSpot1XXdiv { display: block; }
+.plsChatMenuSavedChat1 { height: 50vh; overflow-y: scroll; }
+.plsChatMenu2XXaside {  }
+.plsChatMenuDragSpot2XXdiv { display: block; }
+.plsChatMenuSimulcastChat1 { height: 50vh; overflow-y: scroll; }
+.plsChatMenu3XXaside {  }
+.plsChatMenuDragSpot3XXdiv { display: block; }
+.plsChatMenuSimulcastChat2 { height: 50vh; overflow-y: scroll; }
+.plsChatMenu4XXaside {  }
+.plsChatMenuDragSpot4XXdiv { display: block; }
+.plsChatMenuSimulcastChat3 { height: 50vh; overflow-y: scroll; }
+
+
+.pls-db-2 { }
+.pls-db-3 { width: initial; font-size: .5rem; float: left; }
+.pls-db-4 { font-size: 1.4rem; float: left; }
+.pls-db-5 { font-size: 1.4rem; float: left; }
+.pls-db-6 { font-size: 1.4rem; float: left; }
+.pls-db-7 { display: none; }
+.round-button:hover, 
+.round-button:focus, 
+.round-button:active, 
+.round-button.pls-focused, 
+.pls-db-2:hover, 
+.pls-db-2:focus, 
+.pls-db-2:active,
+.pls-db-2.pls-focused, 
+.pls-db-3:hover, 
+.pls-db-3:focus, 
+.pls-db-3:active,
+.pls-db-3.pls-focused, 
+.pls-db-4:hover, 
+.pls-db-4:focus, 
+.pls-db-4:active,
+.pls-db-4.pls-focused, 
+.pls-db-5:hover, 
+.pls-db-5:focus, 
+.pls-db-5:active,
+.pls-db-5.pls-focused, 
+.pls-db-6:hover, 
+.pls-db-6:focus, 
+.pls-db-6:active,
+.pls-db-6.pls-focused,
+.pls-db-7:hover, 
+.pls-db-7:focus, 
+.pls-db-7:active,
+.pls-db-7.pls-focused,
+.plsSideMenuYYdiv .pls-focused [type=button]:hover,
+.plsSideMenuYYdiv .pls-focused [type=button]:focus,
+.plsSideMenuYYdiv .pls-focused [type=button]:active,
+.plsSideMenuYYdiv .pls-focused [type=button]:focus-within { background: silver; }
+
+.plsChatMenuSavedChat1XXdiv { height: 60vh; overflow-y: scroll; color: var(--text-color); resize: both; }
+
+.pls-accordion { background: #009578; max-width: 400px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); border-radius: 5px; overflow: hidden; }
+.accordion__content { display: none; background: silver; font-size: 0.85em; height: 200px; line-height: 1.6; padding: 14px 20px; overflow: scroll; }
+.accordion__content button { cursor: pointer; }
+.accordion__input { display: none; }
+.accordion__label { display: block; color: #fff; font-weight: 500; padding: 14px 20px; position: relative; transition: background 0.1s; }
+.accordion__input:checked ~ .accordion__content { display: block; }
+.accordion__label:hover { background: rgba(0, 0, 0, 0.1); cursor: pointer; }
+.sz1b1 { display: block; line-height: 5; margin-top: 1rem; }
+.setting7v1, .setting7v2, .setting7v3, .setting7v4 { width: 100%; max-width: 100%; }
+
+.accordion__label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 12px;
+  height: 6px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+  background-size: contain;
+  transition: transform 0.4s;
+}
+
+.accordion__input:checked ~ .accordion__label::after {
+  transform: translateY(-50%) rotate(0.5turn);
+}
+
+
+.plsVideosMenuContentZZdiv button.rounded.aspect-video {
+color: antiquewhite;
+}
+
+.dragging {
+  opacity: .1;
+}
+
+
+.pls-archyved .pls-settings-menu-form { width: 100%; }
+
+.pls-archyved fieldset { background-color: #000; }
+
+.pls-archyved fieldset legend { color: goldenrod; }
+
+.pls-archyved .pls-accordion { max-width: fit-content; }
+
+.pls-archyved .pls-previous-streams button { color: #000; }
+
+.pls-archyved .pls-button-menu { display: none; }
+
+.pls-archyved .pls-chat-menu-wrapper .content { width: 100%; }
+
+.pls-archyved .pls-chat-menu-wrapper input[id=plsChatMenuButton1]:checked ~ .content .pls-chat-menu-1 { width: 100%; }
+
+.pls-archyved .pls-chat-search-input-text { display: inline-block; width: 8rem; }
+
+.pls-archyved .pls-chat-search-menu button { padding-right: 1.5rem; padding-left: .5rem; }
+
+.pls-archyved .pls-chat-search-full-button { width: 3.5rem; }
+
+.pls-archyved .pls-chat-line { color: #000; }
+
+/* mobile styles */
+@media only screen and (pointer: fine) {
+  [data-tooltip]::after {
+    background-color: rgba(51, 51, 51, 0.9);
+    border-radius: 0.3rem;
+    color: #fff;
+    content: attr(data-tooltip);
+    font-size: 1rem;
+    font-size: 85%;
+    font-weight: normal;
+    line-height: 1.15rem;
+    opacity: 0;
+    padding: 0.25rem 0.5rem;
+    position: fixed;
+    bottom: auto;
+    top: 50%;
+    left: 50%;
+    transition: opacity 0.2s;
+    visibility: hidden;
+    white-space: nowrap;
+    transform: translate(-50%);
+    z-index: 1;
+  }
+
+  [data-tooltip]:focus::after, [data-tooltip]:focus::before,
+  [data-tooltip]:hover::after, [data-tooltip]:hover::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+@media only screen and (pointer: coarse) {
+  [data-tooltip] {
+    line-height: 1;
+    width: 100%;
+    height: 1rem;
+  }
+
+  [data-tooltip]:target::after,
+  [data-tooltip]:active::after,
+  [data-tooltip]:focus::after {
+    position: absolute;
+    top: -2rem;
+    left: 10px;
+    content: attr(data-tooltip);
+    color: #000;
+    background-color: #ddd;
+    border: 1px solid;
+    width: fit-content;
+    height: 5rem;
+    padding: 0.25rem 0.5rem;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+
+@media only screen and (max-width: 640px) {
+  .plsSettingsMenuZZdialog {
+    margin: 0;
+  }
+
+  .plsSettingsMenuZZform {
+    width: min-content;
+  }
+
+  .plsSettingsMenuZZdialog > small {
+    width: 300px;
+  }
+
+  .plsChatMenuXXdiv {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .plsChatMenuXXdiv button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+
+@media only screen and (max-width: 640px) {
+  .plsSettingsMenuZZdialog > small {
+    font-size: xx-small;
+  }
+
+  .plsChatMenuXXdiv button {
+    font-size: 2rem;
+  }
+}

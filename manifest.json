@@ -1,0 +1,227 @@
+{
+"manifest_version": 3,
+
+"name": "Parleystar",
+
+"version": "0.2.20.2025",
+
+"description": "__MSG_description__",
+
+"icons": {
+    "16": "logo/icon16.png",
+    "48": "logo/icon48.png",
+    "128": "logo/icon128.png"
+},
+
+"action": {
+    
+},
+
+"author": "biolithic",
+
+"background": { "service_worker": "background.js" },
+
+"commands": {
+    "streamcommand1": {
+      "suggested_key": "Alt+1",
+      "description": "Show/Hide Live Stream Chat"
+    }, 
+    "streamcommand2": {
+      "suggested_key": "Alt+2",
+      "description": "Show/Hide Recorded Live Stream Chat"
+    }, 
+    "streamcommand3": {
+      "suggested_key": "Alt+3",
+      "description": "Search This Live Stream Chat"
+    }, 
+    "streamcommand4": {
+      "suggested_key": "Alt+4",
+      "description": "Search All Recorded Live Stream Chat"
+    }
+},
+
+"content_scripts": [
+    {
+        "all_frames": true,
+        "css": [
+            "css/styles.css"
+        ],
+        "js": [
+            "foreground.js"
+        ],
+        "matches": [
+            "https://archyved.com/*",
+            "https://arena.tv/*",
+            "https://www.bigo.tv/*",
+            "https://chzzk.naver.com/*",
+            "https://www.clapperapp.com/*",
+            "https://game.naver.com/*",
+            "https://*.instagram.com/*",
+            "https://kick.com/*",
+            "https://loco.com/*",
+            "https://locals.com/*",
+            "https://www.nimo.tv/*",
+            "https://noice.com/*",
+            "https://odysee.com/*",
+            "https://parleystar.com/*",
+            "https://parti.com/*",
+            "https://www.rooter.gg/*",
+            "https://rumble.com/*",
+            "https://www.shareplay.tv/*",
+            "https://play.sooplive.co.kr/*",
+            "https://*.tiktok.com/*",
+            "https://trovo.live/*",
+            "https://*.twitch.tv/*",
+            "https://*.youtube.com/*"
+        ],
+        "exclude_matches": [
+        ],
+        "run_at": "document_end"
+    }
+],
+
+"content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "extension_page": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+},
+
+"cross_origin_opener_policy": {
+    "value": "same-origin"
+},
+
+"default_locale": "en",
+
+// "export": {
+// Optional list of extension IDs explicitly allowed to
+// import this Shared Module's resources.  If no allowlist
+// is given, all extensions are allowed to import it.
+// "allowlist": [
+//   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+// ]
+// },
+
+"externally_connectable": {
+    "ids": ["*"],
+    "matches": [
+        "https://archyved.com/*",
+        "https://arena.tv/*",
+        "https://www.bigo.tv/*",
+        "https://chzzk.naver.com/*",
+        "https://www.clapperapp.com/*",
+        "https://game.naver.com/*",
+        "https://*.instagram.com/*",
+        "https://kick.com/*",
+        "https://loco.com/*",
+        "https://locals.com/*",
+        "https://www.nimo.tv/*",
+        "https://noice.com/*",
+        "https://odysee.com/*",
+        "https://parleystar.com/*",
+        "https://parti.com/*",
+        "https://www.rooter.gg/*",
+        "https://rumble.com/*",
+        "https://www.shareplay.tv/*",
+        "https://play.sooplive.co.kr/*",
+        "https://*.tiktok.com/*",
+        "https://trovo.live/*",
+        "https://*.twitch.tv/*",
+        "https://*.youtube.com/*"
+    ],
+    "accepts_tls_channel_id": false
+},
+
+"homepage_url": "https://parleystar.com/",
+
+"host_permissions": [
+    "https://archyved.com/*",
+    "https://arena.tv/*",
+    "https://www.bigo.tv/*",
+    "https://chzzk.naver.com/*",
+    "https://www.clapperapp.com/*",
+    "https://game.naver.com/*",
+    "https://*.instagram.com/*",
+    "https://kick.com/*",
+    "https://loco.com/*",
+    "https://locals.com/*",
+    "https://www.nimo.tv/*",
+    "https://noice.com/*",
+    "https://odysee.com/*",
+    "https://parleystar.com/*",
+    "https://parti.com/*",
+    "https://www.rooter.gg/*",
+    "https://rumble.com/*",
+    "https://www.shareplay.tv/*",
+    "https://play.sooplive.co.kr/*",
+    "https://*.tiktok.com/*",
+    "https://trovo.live/*",
+    "https://*.twitch.tv/*",
+    "https://*.youtube.com/*"
+],
+
+"permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "nativeMessaging",
+    "alarms",
+    "sidePanel"
+],
+
+"side_panel": {
+    "default_path": "sidepanel.html"
+},
+
+"update_url": "https://parleystar.com/updates",
+
+"version_name": "0.3.23.2025",
+
+"web_accessible_resources": [
+    {
+        "resources": [
+            "shared.js",
+            "open_side_menu.js",
+            "keybinds.js",
+            "voice.js",
+            "sidepanel.js",
+            "video.js",
+            
+            "chatmenu.html",
+
+            "_locales/en/messages.json",
+            "/js/channel_v1.json",
+            "/js/clips_v2.json",
+            "/js/clips_fortnite_v2.json",
+            "/js/channel_v2_videos.json",
+            "/js/channel_v2.json",
+            "/js/videos_latest_v2.json",
+
+            "css/sidepanel.css",
+            "css/arena.css",
+            "css/bigo.css",
+            "css/chzzk.css",
+            "css/clapper.css",
+            "css/instagram.css",
+            "css/kick.css",
+            "css/loco.css",
+            "css/locals.css",
+            "css/nimo.css",
+            "css/noice.css",
+            "css/odysee.css",
+            "css/parleystar.css",
+            "css/parti.css",
+            "css/rooter.css",
+            "css/rumble.css",
+            "css/shareplay.css",
+            "css/sooplive.css",
+            "css/tiktok.css",
+            "css/trovo.css",
+            "css/twitch.css",
+            "css/x.css",
+            "css/youtube.css"
+        ],
+        "matches": ["<all_urls>"]
+    }
+]
+}

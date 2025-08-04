@@ -1,0 +1,33 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --rumble-green: #85C742;
+}
+
+/* display */
+
+
+/* background */
+.pls-bigo .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-bigo .plsSettingsMenuZZform details[open],
+.pls-bigo .plsSettingsMenuZZform [type=button],
+.pls-bigo .plsSettingsMenuZZform button,
+.pls-bigo .plsSideMenuYYdiv button:hover, 
+.pls-bigo .plsSideMenuYYdiv button:focus, 
+.pls-bigo .plsSideMenuYYdiv button:active,
+.pls-bigo .plsSideMenuYYdiv button.focused,
+.pls-bigo .plsSideMenuSearchYYinput:hover, 
+.pls-bigo .plsSideMenuSearchYYinput:focus, 
+.pls-bigo .plsSideMenuSearchYYinput:active,
+.pls-bigo .plsSideMenuSearchYYinput.focused, 
+.pls-bigo .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-bigo .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-bigo .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-bigo .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--rumble-green);
+}
+
+/* color */
+.pls-bigo .pls-chat-a {
+	color: var(--rumble-green);
+}

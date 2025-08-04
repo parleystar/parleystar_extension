@@ -1,0 +1,34 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --noice-blue: #6c2cfc;
+  --noice-yellow: #b2e900;
+}
+
+/* display */
+
+
+/* background */
+.pls-noice .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-noice .plsSettingsMenuZZform details[open],
+.pls-noice .plsSettingsMenuZZform [type=button],
+.pls-noice .plsSettingsMenuZZform button,
+.pls-noice .plsSideMenuYYdiv button:hover, 
+.pls-noice .plsSideMenuYYdiv button:focus, 
+.pls-noice .plsSideMenuYYdiv button:active,
+.pls-noice .plsSideMenuYYdiv button.focused,
+.pls-noice .plsSideMenuSearchYYinput:hover, 
+.pls-noice .plsSideMenuSearchYYinput:focus, 
+.pls-noice .plsSideMenuSearchYYinput:active,
+.pls-noice .plsSideMenuSearchYYinput.focused, 
+.pls-noice .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-noice .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-noice .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-noice .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--noice-yellow);
+}
+
+/* color */
+.pls-noice .pls-chat-a {
+	color: var(--noice-yellow);
+}

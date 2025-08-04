@@ -1,0 +1,35 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --instagram-purple: #C13584;
+  --instagram-red: #F56040;
+  --instagram-orange: #FCAF45;
+}
+
+/* display */
+
+
+/* background */
+.pls-instagram .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-instagram .plsSettingsMenuZZform details[open],
+.pls-instagram .plsSettingsMenuZZform [type=button],
+.pls-instagram .plsSettingsMenuZZform button,
+.pls-instagram .plsSideMenuYYdiv button:hover, 
+.pls-instagram .plsSideMenuYYdiv button:focus, 
+.pls-instagram .plsSideMenuYYdiv button:active,
+.pls-instagram .plsSideMenuYYdiv button.focused,
+.pls-instagram .plsSideMenuSearchYYinput:hover, 
+.pls-instagram .plsSideMenuSearchYYinput:focus, 
+.pls-instagram .plsSideMenuSearchYYinput:active,
+.pls-instagram .plsSideMenuSearchYYinput.focused, 
+.pls-instagram .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-instagram .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-instagram .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-instagram .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--instagram-orange);
+}
+
+/* color */
+.pls-instagram .pls-chat-a {
+	color: var(--instagram-orange);
+}

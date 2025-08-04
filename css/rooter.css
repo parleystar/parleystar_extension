@@ -1,0 +1,33 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --rooter-blue: #126bd5;
+}
+
+/* display */
+
+
+/* background */
+.pls-rooter .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-rooter .plsSettingsMenuZZform details[open],
+.pls-rooter .plsSettingsMenuZZform [type=button],
+.pls-rooter .plsSettingsMenuZZform button,
+.pls-rooter .plsSideMenuYYdiv button:hover, 
+.pls-rooter .plsSideMenuYYdiv button:focus, 
+.pls-rooter .plsSideMenuYYdiv button:active,
+.pls-rooter .plsSideMenuYYdiv button.focused,
+.pls-rooter .plsSideMenuSearchYYinput:hover, 
+.pls-rooter .plsSideMenuSearchYYinput:focus, 
+.pls-rooter .plsSideMenuSearchYYinput:active,
+.pls-rooter .plsSideMenuSearchYYinput.focused, 
+.pls-rooter .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-rooter .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-rooter .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-rooter .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--rooter-blue);
+}
+
+/* color */
+.pls-rooter .pls-chat-a {
+	color: var(--rooter-blue);
+}

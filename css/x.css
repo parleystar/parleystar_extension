@@ -1,0 +1,36 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --x-black: #000000;
+  --x-white: #FFFFFF;
+}
+
+/* display */
+
+
+/* background */
+.pls-x .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-x .plsSettingsMenuZZform details[open],
+.pls-x .plsSettingsMenuZZform [type=button],
+.pls-x .plsSettingsMenuZZform button,
+.pls-x .plsSideMenuYYdiv button:hover, 
+.pls-x .plsSideMenuYYdiv button:focus, 
+.pls-x .plsSideMenuYYdiv button:active,
+.pls-x .plsSideMenuYYdiv button.focused,
+.pls-x .plsSideMenuSearchYYinput:hover, 
+.pls-x .plsSideMenuSearchYYinput:focus, 
+.pls-x .plsSideMenuSearchYYinput:active,
+.pls-x .plsSideMenuSearchYYinput.focused, 
+.pls-x .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-x .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-x .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-x .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--x-black);
+  color: var(--x-white);
+}
+
+/* color */
+.pls-x .pls-chat-a {
+	background: var(--x-black);
+  	color: var(--x-white);
+}

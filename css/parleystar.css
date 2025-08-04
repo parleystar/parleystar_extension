@@ -1,0 +1,33 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --parleystar-pink: #dc008b;
+}
+
+/* display */
+
+
+/* background */
+.pls-parleystar .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-parleystar .plsSettingsMenuZZform details[open],
+.pls-parleystar .plsSettingsMenuZZform [type=button],
+.pls-parleystar .plsSettingsMenuZZform button,
+.pls-parleystar .plsSideMenuYYdiv button:hover, 
+.pls-parleystar .plsSideMenuYYdiv button:focus, 
+.pls-parleystar .plsSideMenuYYdiv button:active,
+.pls-parleystar .plsSideMenuYYdiv button.focused,
+.pls-parleystar .plsSideMenuSearchYYinput:hover, 
+.pls-parleystar .plsSideMenuSearchYYinput:focus, 
+.pls-parleystar .plsSideMenuSearchYYinput:active,
+.pls-parleystar .plsSideMenuSearchYYinput.focused, 
+.pls-parleystar .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-parleystar .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-parleystar .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-parleystar .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--parleystar-pink);
+}
+
+/* color */
+.pls-parleystar .pls-chat-a {
+	color: var(--parleystar-pink);
+}

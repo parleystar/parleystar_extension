@@ -1,0 +1,33 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --arena-pink: #dc008b;
+}
+
+/* display */
+
+
+/* background */
+.pls-arena .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-arena .plsSettingsMenuZZform details[open],
+.pls-arena .plsSettingsMenuZZform [type=button],
+.pls-arena .plsSettingsMenuZZform button,
+.pls-arena .plsSideMenuYYdiv button:hover, 
+.pls-arena .plsSideMenuYYdiv button:focus, 
+.pls-arena .plsSideMenuYYdiv button:active,
+.pls-arena .plsSideMenuYYdiv button.focused,
+.pls-arena .plsSideMenuSearchYYinput:hover, 
+.pls-arena .plsSideMenuSearchYYinput:focus, 
+.pls-arena .plsSideMenuSearchYYinput:active,
+.pls-arena .plsSideMenuSearchYYinput.focused, 
+.pls-arena .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-arena .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-arena .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-arena .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--arena-pink);
+}
+
+/* color */
+.pls-arena .pls-chat-a {
+	color: var(--arena-pink);
+}

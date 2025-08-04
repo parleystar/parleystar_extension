@@ -1,0 +1,34 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+
+:root {
+  --shareplay-pink: #dc008b;
+}
+
+/* display */
+
+
+/* background */
+.pls-shareplay .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-shareplay .plsSettingsMenuZZform details[open],
+.pls-shareplay .plsSettingsMenuZZform [type=button],
+.pls-shareplay .plsSettingsMenuZZform button,
+.pls-shareplay .plsSideMenuYYdiv button:hover, 
+.pls-shareplay .plsSideMenuYYdiv button:focus, 
+.pls-shareplay .plsSideMenuYYdiv button:active,
+.pls-shareplay .plsSideMenuYYdiv button.focused,
+.pls-shareplay .plsSideMenuSearchYYinput:hover, 
+.pls-shareplay .plsSideMenuSearchYYinput:focus, 
+.pls-shareplay .plsSideMenuSearchYYinput:active,
+.pls-shareplay .plsSideMenuSearchYYinput.focused, 
+.pls-shareplay .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-shareplay .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-shareplay .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-shareplay .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--shareplay-pink);
+}
+
+/* color */
+.pls-shareplay .pls-chat-a {
+	color: var(--shareplay-pink);
+}

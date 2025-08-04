@@ -1,0 +1,56 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --twitch-purple: #9146ff;
+  --twitch-white: #f0f0ff;
+}
+
+/* display */
+
+
+/* background */
+.pls-twitch .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-twitch .plsSettingsMenuZZform details[open],
+.pls-twitch .plsSettingsMenuZZform [type=button],
+.pls-twitch .plsSettingsMenuZZform button,
+.pls-twitch .plsSideMenuSearchYYinput:hover, 
+.pls-twitch .plsSideMenuSearchYYinput:focus, 
+.pls-twitch .plsSideMenuSearchYYinput:active,
+.pls-twitch .plsSideMenuSearchYYinput.focused, 
+.pls-twitch .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-twitch .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-twitch .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-twitch .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--twitch-purple);
+  color: var(--twitch-white:);
+}
+
+/* color */
+.pls-twitch .pls-chat-a {
+  background: var(--twitch-purple);
+  color: var(--twitch-white:);
+}
+
+
+.pls-twitch.pls-loaded.pls-popout .community-highlight-stack__scroll-area--disable { width: 90%; }
+
+.pls-twitch.pls-loaded.pls-popout #chat-room-header-label { display: block; position: relative; left: -130px; cursor: pointer; }
+
+.pls-twitch.pls-loaded.pls-popout [data-test-selector="chat-viewer-list"] { display: none; }
+
+.pls-twitch.pls-loaded.pls-popout .plsTopZZdiv button { font-size: 2rem; border: 2px solid black; }
+
+.pls-twitch.pls-loaded.pls-popout .plsTopZZdiv legend { font-size: 2rem; }
+
+.pls-twitch.pls-loaded.pls-popout .plsTopZZdiv label { font-size: 2rem; }
+
+.pls-twitch.pls-loaded.pls-popout .plsChatsMenuSavedWrapperZZdiv { font-size: 1.2rem; }
+.pls-twitch.pls-loaded.pls-popout .plsChatsMenuPreviousStreamsZZdiv { font-size: 1.2rem; }
+
+.pls-twitch.pls-loaded.pls-popout .community-highlight-stack__scroll-area--disable { display: none; }
+
+.pls-twitch.pls-loaded.pls-popout .plsChatsMenuSavedWrapperZZdiv button, .pls-twitch.pls-loaded.pls-popout .plsTopZZdiv button.pls-db-3 {
+	font-size: 1rem;
+}
+
+

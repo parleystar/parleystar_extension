@@ -1,0 +1,33 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+	--parti-green: #27dd9b;
+}
+
+/* display */
+
+
+/* background */
+.pls-parti .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-parti .plsSettingsMenuZZform details[open],
+.pls-parti .plsSettingsMenuZZform [type=button],
+.pls-parti .plsSettingsMenuZZform button,
+.pls-parti .plsSideMenuYYdiv button:hover, 
+.pls-parti .plsSideMenuYYdiv button:focus, 
+.pls-parti .plsSideMenuYYdiv button:active,
+.pls-parti .plsSideMenuYYdiv button.focused,
+.pls-parti .plsSideMenuSearchYYinput:hover, 
+.pls-parti .plsSideMenuSearchYYinput:focus, 
+.pls-parti .plsSideMenuSearchYYinput:active,
+.pls-parti .plsSideMenuSearchYYinput.focused, 
+.pls-parti .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-parti .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-parti .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-parti .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--parti-green);
+}
+
+/* color */
+.pls-parti .pls-chat-a {
+	color: var(--parti-green);
+}

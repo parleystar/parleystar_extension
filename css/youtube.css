@@ -1,0 +1,45 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+
+:root {
+  --youtube-red: #ff0000;
+  --youtube-black: #282828;
+}
+
+/* display */
+
+
+/* background */
+.pls-youtube .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-youtube .plsSettingsMenuZZform details[open],
+.pls-youtube .plsSettingsMenuZZform [type=button],
+.pls-youtube .plsSettingsMenuZZform button,
+.pls-youtube .plsSideMenuYYdiv button:hover, 
+.pls-youtube .plsSideMenuYYdiv button:focus, 
+.pls-youtube .plsSideMenuYYdiv button:active,
+.pls-youtube .plsSideMenuYYdiv button.focused,
+.pls-youtube .plsSideMenuSearchYYinput:hover, 
+.pls-youtube .plsSideMenuSearchYYinput:focus, 
+.pls-youtube .plsSideMenuSearchYYinput:active,
+.pls-youtube .plsSideMenuSearchYYinput.focused, 
+.pls-youtube .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-youtube .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-youtube .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-youtube .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--youtube-red);
+}
+
+.pls-youtube .pls-chat-a { color: var(--youtube-red); }
+
+.pls-youtube .plsSettingsMenuZZdialog h4, .pls-youtube .plsSettingsMenuZZdialog h5, .pls-youtube .plsSettingsMenuZZform label { font-size: 1.5rem; }
+
+.pls-youtube .plsSettingsMenuZZdialog legend { font-size: 2rem; }
+
+#action-buttons section { cursor: pointer; }
+
+.pls-youtube .plsChatsMenuSavedTitleZZsmall { font-size: 1.3rem; }
+
+.pls-youtube .plsChatsMenuPreviousStreamsZZdiv p { display: block; clear: both; position: relative; width: 100%; }
+
+.pls-youtube .plsChatsMenuPreviousStreamsZZdiv button { font-size: 1.2rem; }
+

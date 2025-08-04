@@ -1,0 +1,33 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --clapper-orange: orange;
+}
+
+/* display */
+
+
+/* background */
+.pls-clapper .plsSettingsMenuZZform ::-webkit-scrollbar-thumb, 
+.pls-clapper .plsSettingsMenuZZform details[open],
+.pls-clapper .plsSettingsMenuZZform [type=button],
+.pls-clapper .plsSettingsMenuZZform button,
+.pls-clapper .plsSideMenuYYdiv button:hover, 
+.pls-clapper .plsSideMenuYYdiv button:focus, 
+.pls-clapper .plsSideMenuYYdiv button:active,
+.pls-clapper .plsSideMenuYYdiv button.focused,
+.pls-clapper .plsSideMenuSearchYYinput:hover, 
+.pls-clapper .plsSideMenuSearchYYinput:focus, 
+.pls-clapper .plsSideMenuSearchYYinput:active,
+.pls-clapper .plsSideMenuSearchYYinput.focused, 
+.pls-clapper .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-clapper .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-clapper .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-clapper .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--clapper-orange);
+}
+
+/* color */
+.pls-clapper .pls-chat-a {
+	color: var(--clapper-orange);
+}

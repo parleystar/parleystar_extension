@@ -1,0 +1,41 @@
+/* SPDX-FileCopyrightText: © 2025 promising future digital media llc. All rights reserved. <admin@parleystar.com> */
+/* SPDX-License-Identifier: Mozilla Public License 1.1 (MPL-1.1) */
+:root {
+  --kick-green: #00e701;
+}
+
+.pls-kick .plsSettingsMenuZZform::-webkit-scrollbar-thumb, 
+.pls-kick .plsSettingsMenuZZform [type=button],
+.pls-kick .plsSettingsMenuZZform button,
+.pls-kick .plsSideMenuYYdiv button:hover,
+.pls-kick .plsSideMenuYYdiv button:focus, 
+.pls-kick .plsSideMenuYYdiv button:active,
+.pls-kick .plsSideMenuYYdiv button.focused,
+.pls-kick .plsSideMenuSearchYYinput:hover, 
+.pls-kick .plsSideMenuSearchYYinput:focus, 
+.pls-kick .plsSideMenuSearchYYinput:active,
+.pls-kick .plsSideMenuSearchYYinput.focused, 
+.pls-kick .plsSideMenuSearchWrapperYYdiv button:hover, 
+.pls-kick .plsSideMenuSearchWrapperYYdiv button:focus, 
+.pls-kick .plsSideMenuSearchWrapperYYdiv button:active,
+.pls-kick .plsSideMenuSearchWrapperYYdiv button.focused {
+  background: var(--kick-green);
+}
+
+.pls-kick .plsSettingsMenuZZform details[open] { background-color: silver; }
+
+.pls-kick .plsSettingsMenuZZform fieldset label { width: 94%; }
+
+.pls-kick.pls-desktop .chat-container .chat-content[data-v-088ea48c] { opacity: .75; }
+
+.pls-kick .plsSettingsMenuZZform { color: #000; }
+
+.pls-kick .plsSettingsMenuZZform input[type="number"] { color: #bbb; }
+
+.pls-kick .pls-saved-chats-select { background-color: #fff; appearance: none; }
+
+.pls-kick .plsSideMenuYYdiv.pls-focused { bottom: 0px; top: 1px; }
+
+.pls-kick #channel-chatroom span.text-sm.font-bold { cursor: pointer; }
+
+.pls-kick .plsSideMenuSearchYYinput { display: inline-block; }
